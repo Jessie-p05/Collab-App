@@ -59,13 +59,9 @@ export default function ChatRoom(props) {
 
 
   
-  // console.log("leaddddddd",leaderId, typeof leaderId);
-  const welcomeMsg = {
-    body:"Thanks, join us now!!"
-  }
-
+  
   const handleSendMessage = () => {
-    sendMessage(newMessage,welcomeMsg);
+    sendMessage(newMessage);
     setNewMessage("");
   };
 

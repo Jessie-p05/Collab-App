@@ -59,11 +59,11 @@ import MultiChipSelect from "./multiChipSelect";
 
 
       '& .MuiTextField-root': {
-        margin: 'theme.spacing(1)',
+        margin: 'theme.spacing(2)',
         width: '600px'
       },
       '& .MuiButtonBase-root': {
-        margin: 'theme.spacing(2)',
+        margin: 'theme.spacing(1)',
       },
     },
   }));
@@ -191,6 +191,7 @@ export default function CreateProject(props) {
             name='name'
             value={newProject.name}
             onChange={handleInputChange}
+            style={{ margin: "10px" }}
           />
       </div>
       <div>
@@ -204,6 +205,7 @@ export default function CreateProject(props) {
             onChange={handleInputChange}
             multiline
             rowsMax={4}
+            style={{ margin: "10px" }}
           /><br />
       </div>
       <div>
@@ -230,6 +232,7 @@ export default function CreateProject(props) {
             name='url'
             value={newProject.url}
             onChange={handleInputChange}
+            style={{ margin: "10px" }}
           />
       </div>
       <div>
@@ -241,6 +244,7 @@ export default function CreateProject(props) {
             name='imgUrl'
             value={newProject.imageUrl}
             onChange={handleInputChange}
+            style={{ margin: "10px" }}
           />
         </div>
         <br />

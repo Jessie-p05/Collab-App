@@ -31,23 +31,14 @@ const useChat = (roomId, leadId) => {
   }, [roomId]);
 
   const currentUserId = cookies.get("currentUser");
-  const leaderId = leadId;
+  
   
 
-  const sendMessage = (messageBody,welcomeMsg) => {
+  const sendMessage = (messageBody) => {
     socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, {
       body: messageBody,
       senderId: currentUserId,
     });
-
-    if(welcomeMsg){
-      setTimeout(()=>{socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, {
-        body: welcomeMsg.body,
-        senderId: leaderId,
-      })}
-      ,1000)
-    }
-
     
   };
 
