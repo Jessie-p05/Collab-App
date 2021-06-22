@@ -67,7 +67,7 @@ function App(props) {
   const CREATE = "CREATE";
 
   const currentUserId = cookies.get("currentUser");
-  console.log("cookie",typeof currentUserId)
+ 
   // const currentUser = findUserById(parseInt(currentUserId), state.users);
   // console.log(currentUser);
   const { mode, transition, back } = useVisualMode(DISPLAY);
