@@ -68,11 +68,9 @@ function App(props) {
 
   const currentUserId = cookies.get("currentUser");
  
-  // const currentUser = findUserById(parseInt(currentUserId), state.users);
-  // console.log(currentUser);
+ 
   const { mode, transition, back } = useVisualMode(DISPLAY);
   if (props.mode === "REGISTER") {
-    console.log("HELOOOOOO");
     props.mode = "";
     registration();
   }
@@ -129,14 +127,11 @@ function App(props) {
       if (newSkills.includes(skill)) {
         let index = newSkills.indexOf(skill);
         newSkills.splice(index, 1);
-        console.log("Skill to be removed:", skill);
       } else {
         newSkills = [...newSkills, skill];
       }
     }
     let filteredProjects = filterProjectsBySkills(newSkills, state.projects);
-    console.log("newSkills in skillFilter", newSkills);
-    //console.log("filteredProjects in skillFilter",filteredProjects)
     setState((prev) => ({
       ...prev,
       skills: newSkills,
@@ -199,7 +194,6 @@ function App(props) {
 
                 <div style={{marginBottom: "10px", marginRight: "20px"}}>
                   <button className="btn-ultra-voilet" onClick={()=>{
-                    console.log("showSkills:", state.showSkills)
                     setShowSkills(!state.showSkills)
                     }}>
                     Filter By Skills
