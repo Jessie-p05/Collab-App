@@ -9,7 +9,6 @@ export default function NavBar(props) {
   console.log(props);
   let userSkills = []
   if (props.userId) {
-    // console.log("iddddd",props.userId)
     let userToShow;
     userToShow = findUserById(props.userId, props.users)
     for (const user of props.users) {
