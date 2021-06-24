@@ -8,6 +8,7 @@
     "start": "node app.js",
     "build": "cd client && npm install && npm run build",
     "dev": "nodemon app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "db:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:undo:all && sequelize-cli db:seed:all"
   },
   "author": "",
