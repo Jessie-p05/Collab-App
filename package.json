@@ -6,6 +6,7 @@
   "scripts": {
     "test": "  ",
     "start": "node app.js",
+    "build": "cd client && npm install && npm run build",
     "dev": "nodemon app.js",
     "db:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:undo:all && sequelize-cli db:seed:all"
   },
@@ -26,5 +27,7 @@
   "devDependencies": {
     "nodemon": "^2.0.7",
     "sequelize-cli": "^6.2.0"
+  },"engines": {
+    "node": "v14.16.1" 
   }
 }
