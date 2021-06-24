@@ -4,7 +4,7 @@ const {
   User,
   Project,
   Users_Projects,
-} = require("./models/");
+} = require("./models");
 
 const PORT = process.env.PORT || 5000;
 const express = require("express");
@@ -26,9 +26,9 @@ const cors = require("cors");
 app.use(cors());
 
 //CollabApp Routes
-app.use('/register', require('./routes/register'));
-app.use("/users", require("./routes/users"));
-app.use("/projects", require("./routes/projects"));
+app.use('/register', require('./CollabApp-api/routes/register'));
+app.use("/users", require("./CollabApp-api/routes/users"));
+app.use("/projects", require("./CollabApp-api/routes/projects"));
 app.use("/", (req, res) => res.send("Hello World. This is the CollabApp"));
 
 //socket.io server
