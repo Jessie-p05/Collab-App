@@ -13,10 +13,13 @@ export default function Login(props) {
   // Finding the user by email from the client side users and check the password
   const submitLogin = () => {
     const theUser = props.users.find(user => user.email === email);
-    if(theUser !== "undefined" && theUser.password === password) {
+    // console.log("user!!",theUser)
+    if(theUser && theUser.password === password) {
       cookies.set("currentUser", theUser.id, { path: "/" });
       props.pickSkills();
-    } else console.log("Please navigate to registeration page and register")
+    } else if (theUser && theUser.password !== password) {
+      alert("Incorrect password, please try again")
+    } else alert("Please navigate to registration page and register")
 
   };
   return (

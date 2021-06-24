@@ -72,10 +72,9 @@ export default function NavBar(props) {
               </a>
             </li>
             <li>
-              <a style={{color: "white"}} className="nav-link text-nowrap navbutton" onClick={()=>{
-                  cookies.set("currentUser", 1, { path: "/" })
-                  window.location.reload()
-                }}>
+              <a style={{color: "white"}} className="nav-link text-nowrap navbutton" onClick={
+                  props.login
+                }>
                 Login
               </a>
             </li>
