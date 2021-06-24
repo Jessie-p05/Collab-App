@@ -20,7 +20,6 @@ module.exports = {
     "database": "collabapp",
     "host": "localhost",
     "dialect": "postgres",
-    "operatorsAliases": false,
     "use_env_variable": "DATABASE_URL"
   }
 }
