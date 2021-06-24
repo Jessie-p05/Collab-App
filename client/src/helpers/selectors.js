@@ -56,4 +56,4 @@ const findMentors = (users, skills) => {
 //   return 
 // }
 
-module.exports = { findUserById, findAllById, filterProjectsBySkills, findMentors, userHasSkill }
+export  { findUserById, findAllById, filterProjectsBySkills, findMentors, userHasSkill }
