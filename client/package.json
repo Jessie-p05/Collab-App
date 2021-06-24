@@ -29,7 +29,7 @@
     "react-google-font-loader": "^1.1.0",
     "react-jss": "^8.0.0",
     "react-responsive-carousel": "^3.2.18",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "react-select": "^4.3.1",
     "react-sticky-box": "^0.9.3",
     "rebass": "^4.0.7",
@@ -66,5 +66,5 @@
   "devDependencies": {
     "@types/styled-components": "^5.1.10"
   },
-  "proxy":"http://localhost:5000"
+  "proxy": "http://localhost:5000"
 }
