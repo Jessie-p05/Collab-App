@@ -20,7 +20,7 @@ export default function useApplicationData() {
   // fetch the initial data in database;
   useEffect(() => {
 
-    axios.defaults.baseURL = "http://localhost:5000";
+    // axios.defaults.baseURL = "http://localhost:5000";
     Promise.all([
       axios.get("/projects"),
       axios.get("/users"),
