@@ -1,12 +1,12 @@
 {
-  "name": "collapapp-api",
+  "name": "collabApp",
   "version": "1.0.0",
   "description": "Simple Collaboration App Api for connecting the client module to database",
   "main": "app.js",
   "scripts": {
     "test": "  ",
     "start": "node app.js",
-    "build": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client/ && npm install --only=dev && NODE_ENV=development npm install --no-shrinkwrap && npm run build",
     "dev": "nodemon app.js",
     "db:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:undo:all && sequelize-cli db:seed:all"
   },

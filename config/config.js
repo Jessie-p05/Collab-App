@@ -15,10 +15,10 @@ module.exports = {
     "dialect": "postgres"
   },
   "production": {
-    "username": "labber",
-    "password": "labber",
-    "database": "collabapp",
-    "host": "localhost",
+    "username": process.env.PGUSERNAME,
+    "password": process.env.PGPASSWORD,
+    "database": process.env.PGDATABASE,
+    "host": process.env.PGHOST,
     "dialect": "postgres"
   }
 }
