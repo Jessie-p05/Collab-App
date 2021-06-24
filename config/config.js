@@ -20,6 +20,9 @@ module.exports = {
     "database": "collabapp",
     "host": "localhost",
     "dialect": "postgres",
-    "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "DATABASE_URL",
+    "ssl": `{
+      rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false)
+    }`
   }
 }
