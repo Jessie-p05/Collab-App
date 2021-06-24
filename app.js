@@ -27,6 +27,7 @@ app.use(cors());
 
 // Have Node serve the files for our built React app
 // app.use('/static',express.static(path.resolve(__dirname, './client/build')));
+app.use("/static", express.static(path.join(__dirname, "client/build")));
 
 //CollabApp Routes
 app.use("/register", require("./routes/register"));
@@ -34,13 +35,11 @@ app.use("/users", require("./routes/users"));
 app.use("/projects", require("./routes/projects"));
 app.use("/", (req, res) => res.send("Hello World. This is the CollabApp"));
 
-if (process.env.NODE_ENV === "production") {
-  app.use("/static", express.static(path.join(__dirname, "client/build")));
+
   // All other GET requests not handled before will return our React app
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    res.sendFile(path.join(__dirname, "/client/build", "index.html"));
   });
-}
 //socket.io server
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
