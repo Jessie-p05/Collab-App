@@ -15,14 +15,11 @@ module.exports = {
     "dialect": "postgres"
   },
   "production": {
-    "username": "labber",
-    "password": "labber",
-    "database": "collabapp",
-    "host": "localhost",
-    "dialect": "postgres",
     "use_env_variable": "DATABASE_URL",
-    "ssl": `{
-      rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false)
-    }`
+    "dialectOptions": {
+      ssl: {
+          rejectUnauthorized: false
+      }
+  }
   }
 }
