@@ -172,7 +172,7 @@ function App(props) {
         )}
         {mode === DISPLAY && (
           <div style={{marginBottom: "20px"}}>
-            <SearchBar skills={state.skills} setState={setState} />
+            <SearchBar skills={state.skills} setState={setState} reloadAllProjects={reloadAllProjects}/>
           </div>
         )}
         {mode === DISPLAY && (
@@ -315,10 +315,6 @@ function App(props) {
           {mode === REGISTER && (
             <Register
               users={state.users}
-              // project={state.project}
-              // projects={state.projects}
-              // pickAProject = {pickAProject}
-              // pickAUser = {pickAUser}
               setUsers={setUsers}
               pickSkills={pickSkills}
             />
@@ -326,12 +322,7 @@ function App(props) {
           {mode === LOGIN && (
             <Login
               users={state.users}
-              // project={state.project}
-              // projects={state.projects}
-              // pickAProject = {pickAProject}
-              // pickAUser = {pickAUser}
-              // setUsers={setUsers}
-              pickSkills={pickSkills}
+              backToHome={backToHome}
             />
           )}
           {mode === SKILLS && (
@@ -339,9 +330,6 @@ function App(props) {
               user={state.user}
               users={state.users}
               setState={setState}
-              // project={state.project}
-              // projects={state.projects}
-              // pickAProject = {pickAProject}
               allSkills={state.allSkills}
               pickAUser={pickAUser}
               backToHome={backToHome}
