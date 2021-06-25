@@ -6,7 +6,7 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
-const SOCKET_SERVER_URL = "http://localhost:5000";
+const SOCKET_SERVER_URL = "https://rocky-coast-47563.herokuapp.com";
 
 const useChat = (roomId, leadId) => {
   const [messages, setMessages] = useState([]);
