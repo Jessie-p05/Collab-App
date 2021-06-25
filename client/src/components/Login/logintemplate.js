@@ -1,8 +1,4 @@
-// import React from "react";
-import React, { useState } from "react";
-// import Button from "../Button";
-import Cookies from "universal-cookie";
-//material-ui
+import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,13 +13,22 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-const cookies = new Cookies();
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '90vh',
-    width:'1180px',
-    marginTop:'-110px'
+    height: '100vh',
   },
   image: {
     backgroundImage: 'url(https://source.unsplash.com/random)',
@@ -52,27 +57,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-export default function Login(props) {
-
-  const [email, setEmail] = useState(props.email || "");
-  const [password, setPassword] = useState(props.email || "");
-  // Finding the user by email from the client side users and check the password
-  const submitLogin = () => {
-    const theUser = props.users.find(user => user.email === email);
-    if(theUser && theUser.password === password) {
-      cookies.set("currentUser", theUser.id, { path: "/" });
-      props.backToHome();
-    } else if (theUser && theUser.password !== password) {
-      alert("Incorrect password, please try again")
-    } else alert("Please navigate to registration page and register")
-
-  };
-
+export default function SignInSide() {
   const classes = useStyles();
+
   return (
-    // <article>
-<Grid container component="main" className={classes.root}>
+    <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -94,7 +83,6 @@ export default function Login(props) {
               name="email"
               autoComplete="email"
               autoFocus
-              onChange={(event) => setEmail(event.target.value)}
             />
             <TextField
               variant="outlined"
@@ -106,7 +94,6 @@ export default function Login(props) {
               type="password"
               id="password"
               autoComplete="current-password"
-              onChange={(event) => setPassword(event.target.value)}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -118,7 +105,6 @@ export default function Login(props) {
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick={() => submitLogin()}
             >
               Sign In
             </Button>
@@ -134,37 +120,12 @@ export default function Login(props) {
                 </Link>
               </Grid>
             </Grid>
+            <Box mt={5}>
+              <Copyright />
+            </Box>
           </form>
         </div>
       </Grid>
     </Grid>
-
-
-      /* <h2>--------------------Register-----------------</h2>
-
-      <div>
-        <input
-          className="appointment__create-input text--semi-bold"
-          name="email"
-          type="text"
-          value={email}
-          placeholder={"Enter Email"}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </div>
-      <div>
-        <input
-          className="appointment__create-input text--semi-bold"
-          name="password"
-          type="text"
-          value={password}
-          placeholder={"Enter password"}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </div>
-
-      <Button onClick={() => submitLogin()}>Log In</Button>
-
-    </article> */
   );
 }

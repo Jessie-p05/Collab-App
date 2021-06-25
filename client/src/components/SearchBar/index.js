@@ -25,6 +25,7 @@ export default function SearchBar(props) {
     <div style={{display: "flex", marginTop: "20px", width: "500px"}}>
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbar" onChange={(word)=>onKeywordChanged(word)}></input>
       <button class="btn btn-outline-success" onClick={submitKeyword}>Search</button>
+      <button class="btn btn-outline-success" onClick={props.reloadAllProjects} style={{ marginLeft: "10px", width: "150px"}}>Reload All</button>
     </div>
   )
 
