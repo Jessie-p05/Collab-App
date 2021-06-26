@@ -34,26 +34,15 @@ In the browser, you can see the data get loaded.
 #### Register and pick your skills
 <!-- ![Register and pick your skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/register.gif?raw=true) -->
 <p align="center">
-  <img width="460" height="300" src="https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/register.gif?raw=true">
+  <img width="80%" height="100%" src="https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/register.gif?raw=true">
 </p>
 
 #### AutoMatch the projects which fit your set skills
 ![AutoMatch the projects which fit your set skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/autoMatch.gif?raw=true)
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+
 #### Chat to the group and join
 ![Chat to the group and join](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/chat.gif?raw=true)
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+
 #### Set goals or send mentor request
 ![Set goals or send mentor request](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/goal%20and%20mentor.gif?raw=true)
 
