@@ -35,13 +35,23 @@ In the browser, you can see the data get loaded.
 ![Register and pick your skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/register.gif?raw=true)
 
 
+
+
+
 #### AutoMatch the projects which fit your set skills
 ![AutoMatch the projects which fit your set skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/autoMatch.gif?raw=true)
 
 
 
+
+
+
 #### Chat to the group and join
 ![Chat to the group and join](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/chat.gif?raw=true)
+
+
+
+
 
 
 
