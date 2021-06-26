@@ -1,46 +1,36 @@
-# React + Express No-Fluff Boilerplate
+# CollabApp
 
-A boilerplate project for anyone interested in making a project that uses React and Express.
+CollabApp aims for finding collaborators for online projects. 
 
-This repository is a bootleg of @NimaBoscarino's [React Rails Boilerplate](https://github.com/NimaBoscarino/react-rails-boilerplate). It uses the same React app, but replaces the Rails server with an Express server.
+Similar to dating apps that match based on preferences, it matches groups of people who are interested in working on the same kind of project. 
 
-Note! This boilerplate has _no fluff_! That means that there's nothing set up for you to do authentication stuff, there's no Redux stuff, and there's no React Router stuff. On the Express end, there is no session storage or database connection.
+This app is tailored to people who want to work on side projects but don't have the networking skills to find collaborators.
 
-The main important bit is that the React project has `proxy` set to `localhost:8080` in the `package.json` file, and that the Express app listens to port 8080 in `server.js`. Take a look!
+Create your profile with your skills by registration, and then autoMatch for a group based on those skills. You will be shown a selection of projects that match your settings.
+You can talk to the group members and get more information about this project, send a join request if everything goes well. After joining a group, you can set goals for the project, or send mentor requests when you get stuck.
 
-You can (and perhaps should) rename the directories `express-back-end` and `react-front-end` if you want-- The name doesn't matter.
+
+Target Audience: People who have great ideas for a project, but need collaborators with specific skills. People who want to join a project, but don’t have any ideas. Any professionals or amateur project makers Web designers, Software designers, YouTubers, artists, writers, game designers Mentors.
+
+
+[Deployment link on heroku, welcome to check it out and have fun!](https://rocky-coast-47563.herokuapp.com/)
+
+
+### Tech stack
+React, Express, Sequelize, Socket.io
+
 
 ## Running the projects
 
 You need **TWO** terminal windows/tabs for this (or some other plan for running two Node processes).
 
-In one terminal, `cd` into `react-front-end`. Run `npm install` or `yarn` to install the dependencies. Then run `npm start` or `yarn start`, and go to `localhost:3000` in your browser.
+In one terminal, `cd` into `client`. Run `npm install` or `yarn` to install the dependencies. Then run `npm start` or `yarn start`, and go to `localhost:3000` in your browser.
 
-In the other terminal, `cd` into `express-back-end`. Run `npm install` or `yarn` to install the dependencies, then `npm start` or `yarn start` to launch the server.
+In the other terminal, `cd` into root folder. Run `npm install` or `yarn` to install the dependencies, then run `npm run db:reset` or `yarn run db:reset`to set the database, finally `npm run dev` or `yarn run dev` to launch the server.
 
-In the browser, you can click on the button and see the data get loaded.
+In the browser, you can see the data get loaded.
 
-If this doesn't work, please message me!
 
-## Next steps
+## Future implement
 
-From here, you can start working on your project!
 
-As soon as the dependencies are installed, your Express server can serve JSON and static assets (like images) in response to API calls from the React app. You can get started on developing your React app, routing plan, etc. right away! Any request that isn't handled by React is passed on to the Express server. That means that you can call a route like `/api/users` from React using `fetch`, `axios`, or something else, and Express will receive it as though they originated from the same app. For routing, best practice is to namespace all of your data routes to `/api`, so that they don't clash with other routing schemes, like React Router.
-
-At some point, you'll likely want to install and configure a database driver for Postgres or MongoDB-- Refer to past projects for hints on how to do this.
-
-And don't forget to update the README!
-
-## Example Projects
-
-You might want to look at examples of projects that have used this boilerplate for hints on how to extend it. Here are a few:
-
-* [Later Cart](https://github.com/bonitac/later-cart)
-* [Buddi.io](https://github.com/Danny-Tran/buddi.io)
-
-If you'd like your project added to the list, please shoot me a message.
-
-## Contact
-
-Please contact me on Slack (@garrettgsb) or Nima at `nima@lighthouselabs.com` if you have any questions, requests, or feedback, or post an issue to this repo. If you are using the boilerplate, I'd love to hear from you as well!
