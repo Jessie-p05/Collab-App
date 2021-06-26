@@ -81,7 +81,6 @@ const ProjectInfo = (props) => {
           className={"MuiCardMedia-root"}
           image={props.project.imgUrl}
         />
-        {console.log(props.project.imgUrl)}
         <CardContent className={"MuiCardContent-root"}>
           <div className="projectInfo">
             <Typography

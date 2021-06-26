@@ -14,11 +14,11 @@ const app = express();
 
 // const server = require("http").createServer();
 const server = require("http").createServer(app);
-const io = require("socket.io")(server, {
-  cors: {
-    origin: "*",
-  },
-});
+// const io = require("socket.io")(server, {
+//   cors: {
+//     origin: "*",
+//   },
+// });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,6 +42,19 @@ app.use("/", (req, res) => res.send("Hello World. This is the CollabApp"));
   });
 //socket.io server
 
+
+
+server.listen(PORT, async () => {
+  console.log(`Server started on port, ${PORT}`);
+  await sequelize.authenticate();
+  console.log("database synced!");
+});
+
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+  },
+});
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 
 io.on("connection", (socket) => {
@@ -58,14 +71,4 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     socket.leave(roomId);
   });
-});
-
-// server.listen(PORT, async () => {
-//   console.log(`Listening on port ${PORT}`);
-// });
-
-server.listen(PORT, async () => {
-  console.log(`Server started on port, ${PORT}`);
-  await sequelize.authenticate();
-  console.log("database synced!");
 });
