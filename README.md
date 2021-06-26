@@ -38,6 +38,9 @@ In the browser, you can see the data get loaded.
 
 
 #### AutoMatch the projects which fit your set skills
+##### which is:
+##### Javascript, React, Ruby in this example
+
 |![gif](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/autoMatch.gif?raw=true)|
 | ------ |
 #### Chat to the group and join
