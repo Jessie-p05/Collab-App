@@ -32,12 +32,8 @@ In the browser, you can see the data get loaded.
 
 ### Screenshot
 #### Register and pick your skills
-![Register and pick your skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/register.gif?raw=true)
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+![Register and pick your skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/register.gif?raw=true){:  width="70%" style="float:left; padding-right:10px" }
+
 #### AutoMatch the projects which fit your set skills
 ![AutoMatch the projects which fit your set skills](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/autoMatch.gif?raw=true)
 &nbsp;
