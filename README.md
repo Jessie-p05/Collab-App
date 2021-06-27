@@ -50,5 +50,36 @@ In the browser, you can see the data get loaded.
 |![gif](https://github.com/Jessie-p05/Collab-App/blob/master/client/public/image/goal%20and%20mentor.gif?raw=true)|
 | ------ |
 ## Future implement
+* refactor to use react router
+* search bar auto submit
+* fb / google login
+* text / email notifications
+* github API
+* Be able to block certain keywords
+* project preferences and interests - group size, language, working hours
+* other people could give you points for adding to the discussion and completing targets, like stack overflow.
+* Once the group decided the project was complete, it would be displayed on the "completed projects" page of the app, and data about the * group could be added to "successful groups" to help organize other groups in the future. If the group decided to abandon the project, * the data could be added to "failed groups".
+* Analytics page, where you can see the success rate of your previous projects, timeline, points, etc.
+* Media connections, linking fb, twitter, discord and zoom.
+* Awards and badges to give to other people a la reddit
+* Mentorship connection: have the ability to chat either one on one or with the group to respected mentors in any field.
+* mentor dashboard
+* email/text notifications
+* block access before login
+* testimonials
+* become a mentor button
+* more search options
+* project lead / mentor notifacations in site
+* project analytics
+* project lead moderation
+* public / private projects
+* invite friends
+* complete / fail project
+* modify project description / title
+* member limits
+* chatroom polls
+
+
+
 
 
