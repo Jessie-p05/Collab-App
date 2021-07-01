@@ -139,32 +139,5 @@ export default function Login(props) {
       </Grid>
     </Grid>
 
-
-      /* <h2>--------------------Register-----------------</h2>
-
-      <div>
-        <input
-          className="appointment__create-input text--semi-bold"
-          name="email"
-          type="text"
-          value={email}
-          placeholder={"Enter Email"}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </div>
-      <div>
-        <input
-          className="appointment__create-input text--semi-bold"
-          name="password"
-          type="text"
-          value={password}
-          placeholder={"Enter password"}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </div>
-
-      <Button onClick={() => submitLogin()}>Log In</Button>
-
-    </article> */
   );
 }
