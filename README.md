@@ -6,8 +6,8 @@ Similar to dating apps that match based on preferences, it matches groups of peo
 
 This app is tailored to people who want to work on side projects but don't have the networking skills to find collaborators.
 
-Create your profile with your skills by registration, and then autoMatch for a group based on those skills. You will be shown a selection of projects that match your settings.
-You can talk to the group members and get more information about this project, send a join request if everything goes well. After joining a group, you can set goals for the project, or send mentor requests when you get stuck.
+Create your profile with your skills by registration, and then autoMatch for groups based on those skills. You will be shown a selection of projects that match your settings.
+You can talk to the group members and get more information about their project, send a join request if everything goes well. After joining a group, you can set goals for the project, or send mentor requests when you get stuck.
 
 
 Target Audience: People who have great ideas for a project, but need collaborators with specific skills. People who want to join a project, but don’t have any ideas. Any professionals or amateur project makers Web designers, Software designers, YouTubers, artists, writers, game designers Mentors.
@@ -17,7 +17,7 @@ Target Audience: People who have great ideas for a project, but need collaborato
 
 
 ### Tech stack
-React, Express, Sequelize, Socket.io
+React, Express, Sequelize, Socket.io, postgreSQL
 
 
 ## Running the projects
@@ -69,7 +69,7 @@ In the browser, you can see the data get loaded.
 * testimonials
 * become a mentor button
 * more search options
-* project lead / mentor notifacations in site
+* project lead / mentor notifications in site
 * project analytics
 * project lead moderation
 * public / private projects
