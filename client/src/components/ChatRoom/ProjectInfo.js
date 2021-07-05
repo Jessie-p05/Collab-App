@@ -18,7 +18,6 @@ const moment = require('moment');
 const ProjectInfo = (props) => {
   //logic for goals
   const goalToChange = props.project.project_goals;
-  // console.log("projectInState", goalToChange);
 
   const handleOnChange = (position, goal) => {
     const changedGoalItem = {
@@ -34,9 +33,9 @@ const ProjectInfo = (props) => {
     axios.patch(
       `http://localhost:5000/projects/${props.project.id}/${goal.id}`
     );
-    console.log("change", changeProject.project_goals);
-    console.log("state", props.project);
-    console.log("projects", props.projects);
+    // console.log("change", changeProject.project_goals);
+    // console.log("state", props.project);
+    // console.log("projects", props.projects);
 
     props.setState((prev) => ({
       ...prev,

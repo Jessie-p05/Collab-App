@@ -5,7 +5,6 @@ const {sequelize, User } = require('../models');
 
 //Post the register form for a new user
 router.post('/', async(req, res) => {
-  // console.log("req!!!!!",req.body)
   const { firstName, lastName, email, password } = req.body
   try {
       const user = await User.create({firstName, lastName, email, password})

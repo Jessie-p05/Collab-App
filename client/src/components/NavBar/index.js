@@ -6,7 +6,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 const cookies = new Cookies();
 
 export default function NavBar(props) {
-  console.log(props);
+  
   let userSkills = []
   if (props.userId) {
     let userToShow;

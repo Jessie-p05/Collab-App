@@ -19,11 +19,10 @@ const styles = {
 export default function AutoMatch(props){
   let thisUser = null;
   thisUser = findUserById(Number(props.userId), props.users)
-  console.log("USER IN AUTOMATCH:", thisUser)
+  
   let currentUserSkills;
   if (thisUser) {
     currentUserSkills = thisUser.user_skills.map((skill)=>{return skill.id})
-    console.log("currentUserSkills", currentUserSkills, "props.skills:", props.skills)
     
   }
   
