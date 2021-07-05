@@ -85,7 +85,6 @@ const renderSuggestion = params => {
 };
 
 const getSuggestions = (inputValue, itemList) =>
-//console.log("itemlist:", itemList, "inputValue:", inputValue)
   itemList.filter(item =>
     item.name.includes(inputValue)
   );

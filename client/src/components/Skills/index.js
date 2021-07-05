@@ -35,21 +35,18 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function Skills(props) {
-  //console.log(props.allSkills)
   const options = props.allSkills.map((skill) => {
-    //console.log(skill)
     return { value: skill.id, label: skill.name, isFixed: true };
   });
 
   
 
   const currentUser = cookies.get("currentUser");
-  console.log(currentUser, typeof currentUser)
+ 
 
   const submitSkills = (props) => {
     const url = `http://localhost:5000/users/${currentUser}/skills`;
     return axios.post(url, { skills: state.mySkills }).then((body) => {
-      // console.log(body)
       updateUsers();
       props.backToHome();
     });
@@ -97,7 +94,6 @@ const updateUsers = () =>{
   userToUpdate.user_skills = user_skills;
   const usersToUpdate = props.users.map(user => user.id === userToUpdate.id ? {...userToUpdate} : {...user});
   props.setState(prev => ({...prev,user: newUser, users :[...usersToUpdate]}));
-  console.log(props);
 }
 
   

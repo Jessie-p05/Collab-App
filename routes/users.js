@@ -6,7 +6,6 @@ const {Op} = require("sequelize");
 router.get('/', (req, res) =>
 User.findAll({include: ["user_skills", "user_messages"]})
   .then(users => {
-    // console.log("Users:", users);
     res.set('Access-Control-Allow-Origin','*');
     res.json(users);
   })
@@ -16,7 +15,6 @@ User.findAll({include: ["user_skills", "user_messages"]})
 router.get('/:id/skills', (req, res) =>
 Users_Skills.findAll({ include: Skill, where: {UserId: req.params.id}})
   .then(skills => {
-    // console.log("Users:", skills.dataValues);
     return res.json(skills);
   })
   .catch(err => console.log("Error:"+ err))
@@ -30,11 +28,9 @@ router.get('/:id/match', async(req, res) => {
       where: {UserId: UserId}
     })
     .then(async userSkills => {
-      // console.log(mySkill[0].dataValues, mySkill[1].dataValues)
 
       const skills = userSkills.map(ele => ele.dataValues.SkillId)
       // return mySkill}
-      // console.log("SKILLS IN MATCH:", skills)
       const projectSkills = await Projects_Skills.findAll({
         where: {SkillId: {[Op.or]: skills}},
       })
@@ -73,7 +69,6 @@ router.get('/:id/skills', async(req, res) => {
           UserId: req.params.id
         }
       }).then(skills => {
-        // console.log("SKILLS:",skills)
         return res.json(skills)
       })
   } catch (err) {
@@ -86,7 +81,6 @@ router.get('/:id/skills', async(req, res) => {
 //patch (update) user's skills.
 router.post('/:id/skills', async(req, res) => {
   const { skills } = req.body
-  // console.log("SKILLS:", skills)
   try {
     for(SkillId of skills) {
       await Users_Skills.create({UserId: req.params.id, SkillId})
@@ -108,10 +102,10 @@ router.get('/:id/match', async(req, res) => {
       where: {UserId: UserId}
     })
     .then(async userSkills => {
-      // console.log(mySkill[0].dataValues, mySkill[1].dataValues)
+      
       const skills = userSkills.map(ele => ele.dataValues.SkillId)
       // return mySkill}
-      // console.log("SKILLS IN MATCH:", skills)
+      
       const projectSkills = await Projects_Skills.findAll({
         where: {SkillId: {[Op.or]: skills}},
       })

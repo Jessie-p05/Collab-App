@@ -2,8 +2,6 @@ import React from "react";
 import ProjectListItem from "./ProjectListItem";
 
 export default function ProjectList(props) {
-  // console.log("hi")
-  // console.log(props.projects)
 
   const projects = props.projects.map((project, index) => {
 

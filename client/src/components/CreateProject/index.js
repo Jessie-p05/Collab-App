@@ -143,7 +143,6 @@ export default function CreateProject(props) {
             ...prev,
             updateProject}));
           const myProject = props.projects.find(project => project.id === data.data);
-          console.log(myProject, newProject);
           props.pickAProject(newProject);
         })
         .catch(err => console.log(err))

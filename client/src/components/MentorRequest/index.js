@@ -21,7 +21,6 @@ export default function MentorRequest(props) {
   const handleShow = () => setShow(true);
 
   const options = props.allSkills.map((skill)=>{
-    //console.log(skill)
     return {value: skill.id, label: skill.name, isFixed: true}
   })
 
@@ -44,12 +43,9 @@ export default function MentorRequest(props) {
     if (skills.includes(skill)) {
       const index = newSkills.indexOf(skill);
       newSkills.splice(index, 1);
-      console.log("removed skill", skill)
     } else {
       newSkills.push(skill)
-      console.log("pushed skill", skill)
     }
-    console.log("setting mentors with skills", skills)
     setSkills(newSkills);
     setMentors(findMentors(props.users, skills));
     // setState(prev => ({...prev, skills: newSkills, mentors: findMentors(props.users, skills)}))
@@ -132,9 +128,3 @@ export default function MentorRequest(props) {
   );
 }
 
-{/* <div>
-<h1>Mentor Request</h1>
-<div className="wrap">
-  {mentors}
-</div>
-</div> */}
